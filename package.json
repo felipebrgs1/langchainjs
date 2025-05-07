@@ -1,0 +1,20 @@
+{
+    "name": "langchainjs",
+    "module": "index.ts",
+    "type": "module",
+    "private": true,
+    "devDependencies": {
+        "@types/bun": "latest"
+    },
+    "scripts": {
+        "dev": "bun /src/main.ts"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    },
+    "dependencies": {
+        "@langchain/core": "^0.3.54",
+        "@langchain/google-genai": "^0.2.6",
+        "dotenv": "^16.5.0"
+    }
+}
