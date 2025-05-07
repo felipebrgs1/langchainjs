@@ -1,7 +1,7 @@
-import Chatbot from "./Chatbot";
+import { createPromptWithPDFs } from "./Chatbot";
 
 const Template = [
-    Chatbot,
+    createPromptWithPDFs
 ] as const;
 
 export default Template;

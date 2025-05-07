@@ -9,7 +9,7 @@ async function runChat(model: any, promptTemplate: any) {
         output: process.stdout,
     });
 
-    console.log("Chatbot iniciado. Digite 'exit' para sair.");
+    let chatHistory: any[] = [];
 
     while (true) {
         const userInput = await new Promise<string>((resolve) =>
@@ -17,20 +17,22 @@ async function runChat(model: any, promptTemplate: any) {
         );
         if (userInput.trim().toLowerCase() === "exit") break;
 
-        // Aqui você pode adaptar para o formato do seu modelo/prompt
-        const prompt = promptTemplate.createPrompt(userInput);
-        const response = await model.generate(prompt);
+        chatHistory.push({ role: "human", content: userInput });
+        const messages = await promptTemplate.formatMessages({ msgs: chatHistory });
+        const response = await model.invoke(messages);
+        const botMessage = response.content ?? response.text ?? String(response);
 
-        console.log("Bot:", response);
+        console.log("Bot:", botMessage);
+
+        chatHistory.push({ role: "ai", content: botMessage });
     }
 
     rl.close();
 }
 
 async function main() {
-    // Exemplo: usa o primeiro modelo e prompt disponíveis
     const model = Models.GeminiFlash2;
-    const prompt = Template[0]
+    const prompt = await Template[0]();
 
     await runChat(model, prompt);
 }
