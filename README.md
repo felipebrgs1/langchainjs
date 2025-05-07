@@ -32,10 +32,15 @@ To read documents, place a file inside the `/Docs` folder **and restart the appl
 ## 💬 Example interaction
 
 ```bash
-Você:  segundo a constituiçao, quantos vereadores um municipio com 500 mil habitantes deverá ter
-Bot: De acordo com o Artigo 29, IV, f, da Constituição da República Federativa do Brasil, presente no arquivo constituiçao.pdf, um município com mais de 300.000 habitantes e de até 450.000 habitantes deverá ter 23 vereadores. Como o município em questão possui 500 mil habitantes, ele está fora dessa faixa, portanto essa não é a resposta.
+Você: segundo a constituição, quantos vereadores um município com 500 mil habitantes deverá ter
 
-Seguindo para o Artigo 29, IV, g), um município com mais de 450.000 habitantes e de até 600.000 habitantes deverá ter 25 vereadores. (p. 37-38)  
+Bot: De acordo com o Artigo 29, IV, f, da Constituição da República Federativa do Brasil, presente  
+no arquivo constituiçao.pdf, um município com mais de 300.000 habitantes e de até 450.000 habitantes  
+deverá ter 23 vereadores. Como o município em questão possui 500 mil habitantes, ele está fora dessa faixa,  
+portanto essa não é a resposta.
+
+Seguindo para o Artigo 29, IV, g), um município com mais de 450.000 habitantes e de até 600.000 habitantes  
+deverá ter 25 vereadores. (p. 37-38)
 ```
 
 ## ✏️ Modify the prompt
