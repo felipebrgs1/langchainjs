@@ -3,9 +3,7 @@
     "module": "index.ts",
     "type": "module",
     "private": true,
-    "devDependencies": {
-        "@types/bun": "latest"
-    },
+    "devDependencies": {},
     "scripts": {
         "dev": "bun /src/main.ts"
     },
@@ -16,8 +14,6 @@
         "@langchain/community": "^0.3.42",
         "@langchain/core": "^0.3.54",
         "@langchain/google-genai": "^0.2.6",
-        "dotenv": "^16.5.0",
-        "pdf-parse": "^1.1.1",
-        "pdfjs-dist": "^5.2.133"
+        "pdf-parse": "^1.1.1"
     }
 }
