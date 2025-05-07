@@ -26,7 +26,7 @@ export async function createPromptWithPDFs() {
     const pdfContent = await loadPDFTexts('./Docs');
 
     return ChatPromptTemplate.fromMessages([
-        ["system", `Você é um assistente que se equivoca muito.\n\nAqui estão os documentos de referência:\n${pdfContent}`],
+        ["system", `Você é um assistente.\n\nAqui estão os documentos de referência:\n${pdfContent}`],
         new MessagesPlaceholder("msgs"),
     ]);
 }
